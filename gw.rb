@@ -11,7 +11,7 @@ class Gw < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/t98o84/gw/releases/download/v0.1.0/gw_0.1.0_darwin_amd64.tar.gz"
-      sha256 "5751d67dabc12b3976e42d912651dfe79c9240f6faa4eafe5449b6b63b8dd2c5"
+      sha256 "64df6a15166c1540974d64560d0e8bdf9e8cd1508b11e18fc3f248c866e3a46a"
 
       def install
         bin.install "gw"
@@ -19,7 +19,7 @@ class Gw < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/t98o84/gw/releases/download/v0.1.0/gw_0.1.0_darwin_arm64.tar.gz"
-      sha256 "208e3f37335bf8f5d6d98d00e79b58e8c502d3b11438b572ce6867253ed89840"
+      sha256 "5fb376ce515bd2141237e9f53902d8b7b3f2caba48e4aca209dee77442bcf7e2"
 
       def install
         bin.install "gw"
@@ -30,14 +30,14 @@ class Gw < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/t98o84/gw/releases/download/v0.1.0/gw_0.1.0_linux_amd64.tar.gz"
-      sha256 "49f6d4bf7b85275401c315ba270cd5b6c531089fbb78133c04da2b8e7ecf27fb"
+      sha256 "1d46f91f350c7ad6fade4cf3a064a2efa7bf3953dfcf7282bc9dfc6e6bb7a68a"
       def install
         bin.install "gw"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/t98o84/gw/releases/download/v0.1.0/gw_0.1.0_linux_arm64.tar.gz"
-      sha256 "62b08f23e06974176e1d611b9285a0c0eab2a60256b13ce91118738625db0a3b"
+      sha256 "827d0d9d2015568c25bfed2de60c34da8a8049aaa04d5e2796dc44211c934618"
       def install
         bin.install "gw"
       end
