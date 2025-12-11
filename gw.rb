@@ -5,21 +5,21 @@
 class Gw < Formula
   desc "Git worktree wrapper - simplify git worktree management"
   homepage "https://github.com/t98o84/gw"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/t98o84/gw/releases/download/v0.2.1/gw_0.2.1_darwin_amd64.tar.gz"
-      sha256 "4509094a1a040a76bb72af100decde778b2c4e61af295958339d3c004c4ecccc"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.0/gw_0.3.0_darwin_amd64.tar.gz"
+      sha256 "5aef42f198f8a50419b95854dac4d90a9583289bfdfda365c1671cc0c74ca4a3"
 
       def install
         bin.install "gw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/t98o84/gw/releases/download/v0.2.1/gw_0.2.1_darwin_arm64.tar.gz"
-      sha256 "71947ed62eb517755b0cf5b35564af86e060a3fd09254aa50f030a7e49c60179"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.0/gw_0.3.0_darwin_arm64.tar.gz"
+      sha256 "c16ecf8c68eea497a91d9f128dd9ca5f3acaebe40ce285ae53dead20350feb77"
 
       def install
         bin.install "gw"
@@ -29,15 +29,15 @@ class Gw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.2.1/gw_0.2.1_linux_amd64.tar.gz"
-      sha256 "a5f9baa1b71638f734cd3f3841224ad4ee033cde5005bab5f5bf6410b5145714"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.0/gw_0.3.0_linux_amd64.tar.gz"
+      sha256 "76bd528025b9ad7f3edb5a01cea9222bf708a9f0861120ebc162c794eb3263de"
       def install
         bin.install "gw"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.2.1/gw_0.2.1_linux_arm64.tar.gz"
-      sha256 "9124ded3be1ee2c8ca4ebe09dd6af4dfe94aaf1c23664c5a1dd4d49bc9b69e4c"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.0/gw_0.3.0_linux_arm64.tar.gz"
+      sha256 "34d27cc44d748865c707397a8ec42e42f914514c283d02de1e7a0d94c5d4d823"
       def install
         bin.install "gw"
       end
