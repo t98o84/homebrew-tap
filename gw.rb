@@ -5,21 +5,21 @@
 class Gw < Formula
   desc "Git worktree wrapper - simplify git worktree management"
   homepage "https://github.com/t98o84/gw"
-  version "0.3.9"
+  version "0.3.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.9/gw_0.3.9_darwin_amd64.tar.gz"
-      sha256 "f5e0f105ba9786f0d88bde42fd1f1ed84561cd76e02fdb3b32f58473170016b8"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.10/gw_0.3.10_darwin_amd64.tar.gz"
+      sha256 "35c88537c123a16be5ac3b735a3b9c870151169c2b4cf5c9a9513b0a15475492"
 
       def install
         bin.install "gw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.9/gw_0.3.9_darwin_arm64.tar.gz"
-      sha256 "2b5cc816714e95f07144b8efc91aa53ce766f9e309b898d51fdb12f5110e57e6"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.10/gw_0.3.10_darwin_arm64.tar.gz"
+      sha256 "a255307ff590d4df12a33dc7a4a7d5e5a0259f1476475bc319652174023efab6"
 
       def install
         bin.install "gw"
@@ -29,15 +29,15 @@ class Gw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.9/gw_0.3.9_linux_amd64.tar.gz"
-      sha256 "85836a726843307605ccb65ca259166bb2e16bcfdfa2b33ec860cdbc15049fb7"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.10/gw_0.3.10_linux_amd64.tar.gz"
+      sha256 "de43c42a97b28d004b5ef2c642faa15288387e49599a54160466d4c4fc75df41"
       def install
         bin.install "gw"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.9/gw_0.3.9_linux_arm64.tar.gz"
-      sha256 "a3ab8f002b567508e43374c64da51530bc36071ca6fc59692af90c80b1fd02f3"
+      url "https://github.com/t98o84/gw/releases/download/v0.3.10/gw_0.3.10_linux_arm64.tar.gz"
+      sha256 "88b2f421226a25163f4f34d7d183ba243a704d0a2d84aa8d3800942e2b3e78e5"
       def install
         bin.install "gw"
       end
