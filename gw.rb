@@ -5,21 +5,21 @@
 class Gw < Formula
   desc "Git worktree wrapper - simplify git worktree management"
   homepage "https://github.com/t98o84/gw"
-  version "0.3.11"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.11/gw_0.3.11_darwin_amd64.tar.gz"
-      sha256 "0279e7ed3a73fa7399d7b3d2d8bf0ce4aa683c57638e2e7723e7fe79daad992a"
+    on_intel do
+      url "https://github.com/t98o84/gw/releases/download/v0.4.0/gw_0.4.0_darwin_amd64.tar.gz"
+      sha256 "2bb8294c08de93b73707460336087b797a975b7b0790cfcb7ff5529d157070df"
 
       def install
         bin.install "gw"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.11/gw_0.3.11_darwin_arm64.tar.gz"
-      sha256 "aa4b6e79f9645c1cb07c3aa9b18a0aae4474c371ec5a6beba2462e505b070b69"
+    on_arm do
+      url "https://github.com/t98o84/gw/releases/download/v0.4.0/gw_0.4.0_darwin_arm64.tar.gz"
+      sha256 "aebb91ba331540c86708087d6188ce95e6d4f2a057c7590cf1db570bd17a63f8"
 
       def install
         bin.install "gw"
@@ -28,18 +28,24 @@ class Gw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.11/gw_0.3.11_linux_amd64.tar.gz"
-      sha256 "032e4d66ccc9fba16fbca0addf3b64025270a10d9f109bed72fd38a3e0503882"
-      def install
-        bin.install "gw"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/t98o84/gw/releases/download/v0.4.0/gw_0.4.0_linux_amd64.tar.gz"
+        sha256 "78d0ec4f9c4ecc03ee398eb5b415631f139a9fef404be0f5004dd4f99c404fcd"
+
+        def install
+          bin.install "gw"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/t98o84/gw/releases/download/v0.3.11/gw_0.3.11_linux_arm64.tar.gz"
-      sha256 "3db43769f4c77317ad17078238d1ec27631533fc6e375b4f90a8fb342200788b"
-      def install
-        bin.install "gw"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/t98o84/gw/releases/download/v0.4.0/gw_0.4.0_linux_arm64.tar.gz"
+        sha256 "0b72985d6d1a69839175f7cfb4e1b750db68b026ba158493d618bc60f0217460"
+
+        def install
+          bin.install "gw"
+        end
       end
     end
   end
